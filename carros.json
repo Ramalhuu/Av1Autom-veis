@@ -70,5 +70,31 @@
     ],
     "imagem_path": "images/carro_4_1.jpg",
     "status": "disponivel"
+  },
+  {
+    "id": 5,
+    "nome": "Citroen C4",
+    "marca": "Citroen",
+    "ano": 2019,
+    "preco": 59999.0,
+    "quilometragem": 120000.0,
+    "potencia": "180",
+    "combustivel": "Flex",
+    "cambio": "Automático",
+    "descricao": "Muito bom",
+    "imagens": [
+      "images/carro_5_1.jpeg",
+      "images/carro_5_2.jpeg",
+      "images/carro_5_3.jpeg",
+      "images/carro_5_4.jpeg",
+      "images/carro_5_5.jpeg",
+      "images/carro_5_6.jpeg",
+      "images/carro_5_7.jpeg",
+      "images/carro_5_8.jpeg",
+      "images/carro_5_9.jpeg",
+      "images/carro_5_10.jpeg"
+    ],
+    "imagem_path": "images/carro_5_1.jpeg",
+    "status": "reservado"
   }
 ]
