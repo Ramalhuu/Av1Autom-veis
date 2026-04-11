@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "Hb20",
+    "marca": "Hyundai",
+    "ano": 2025,
+    "preco": 59999.0,
+    "quilometragem": 30000.0,
+    "potencia": "115",
+    "combustivel": "Flex",
+    "cambio": "Automático",
+    "descricao": "bom",
+    "imagem_path": "images/carro_1.jpg",
+    "status": "disponivel"
+  }
+]
