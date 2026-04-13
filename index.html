@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Av1Automóveis — Pirituba, São Paulo</title>
+<meta name="description" content="Av1Automóveis — Seminovos de qualidade em Pirituba, São Paulo. Financiamento facilitado e procedência garantida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8F9FB; --white:#FFFFFF; --dark:#0D1117; --navy:#1C2340;
+  --accent:#E8C840; --accent2:#F5D020; --accent-dark:#B89A00;
+  --gray:#6B7280; --border:#E5E7EB;
+  --shadow:0 4px 24px rgba(0,0,0,.07);
+  --shadow-lg:0 16px 48px rgba(0,0,0,.13); --radius:12px;
+  --fd:'Playfair Display',Georgia,serif; --fb:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--bg);color:var(--dark);line-height:1.65;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+nav.scrolled{box-shadow:var(--shadow);}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;height:68px;gap:8px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.logo-mark{height:40px;display:flex;align-items:center;}
+.logo-mark img{height:40px;width:auto;object-fit:contain;display:block;}
+.logo-mark img.logo-dark{display:block;}
+.logo-mark img.logo-light{display:none;}
+.logo-text{display:none;}
+/* Em fundos escuros mostra logo branca */
+.logo-on-dark .logo-mark img.logo-dark{display:none;}
+.logo-on-dark .logo-mark img.logo-light{display:block;}
+.nav-links{display:flex;gap:2px;margin-left:32px;flex:1;}
+.nav-links a{padding:8px 15px;border-radius:8px;text-decoration:none;
+  font-size:14px;font-weight:500;color:var(--gray);transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--dark);background:var(--bg);}
+.nav-links a.active{border-bottom:2px solid var(--accent);border-radius:0;background:transparent;padding-bottom:6px;}
+.nav-cta{margin-left:auto;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;
+  border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;
+  border:none;cursor:pointer;transition:all .2s;font-family:var(--fb);}
+.btn-primary{background:var(--accent);color:var(--navy);}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px);
+  box-shadow:0 4px 16px rgba(232,200,64,.45);}
+.btn-outline{background:transparent;color:var(--dark);border:1.5px solid var(--border);}
+.btn-outline:hover{border-color:var(--dark);background:var(--dark);color:#fff;}
+.btn-white{background:#fff;color:var(--dark);}
+.btn-white:hover{background:var(--bg);}
+.btn-sm{padding:8px 16px;font-size:13px;border-radius:7px;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;margin-left:auto;}
+.hamburger span{width:22px;height:2px;background:var(--dark);border-radius:2px;}
+
+/* ── PAGES ── */
+.page{display:none;min-height:100vh;padding-top:68px;}
+.page.active{display:block;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,#0D1117 0%,#1A1A2E 60%,#16213E 100%);
+  min-height:calc(100vh - 68px);display:flex;align-items:center;
+  position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:56px 56px;}
+.hero-orb1{position:absolute;top:-120px;right:-80px;width:560px;height:560px;
+  background:radial-gradient(circle,rgba(232,200,64,.13),transparent 70%);
+  border-radius:50%;}
+.hero-orb2{position:absolute;bottom:-80px;left:10%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(232,200,64,.07),transparent 70%);
+  border-radius:50%;}
+.hero-content{max-width:1200px;margin:0 auto;padding:64px 24px;
+  position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(232,200,64,.14);border:1px solid rgba(232,200,64,.35);
+  color:#F5D020;padding:6px 16px;border-radius:100px;
+  font-size:11px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;margin-bottom:24px;}
+.hero h1{font-family:var(--fd);font-size:clamp(40px,6vw,68px);
+  font-weight:700;color:#fff;line-height:1.08;margin-bottom:20px;
+  border-left:4px solid var(--accent);padding-left:18px;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero p{font-size:17px;color:#8892A4;max-width:480px;
+  margin-bottom:40px;font-weight:300;line-height:1.75;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:48px;margin-top:60px;
+  padding-top:36px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;}
+.stat-num{font-family:var(--fd);font-size:30px;font-weight:700;color:#fff;}
+.stat-lbl{font-size:12px;color:#6B7280;margin-top:3px;}
+
+/* ── SECTIONS ── */
+.section{padding:80px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.section-tag{display:inline-block;background:rgba(232,200,64,.10);
+  color:var(--accent-dark);padding:4px 14px;border-radius:100px;
+  font-size:11px;font-weight:700;letter-spacing:.6px;
+  text-transform:uppercase;margin-bottom:12px;}
+.section-title{font-family:var(--fd);font-size:clamp(26px,4vw,40px);
+  font-weight:700;color:var(--dark);margin-bottom:8px;}
+.section-sub{font-size:15px;color:var(--gray);}
+
+/* ── CARS ── */
+.cars-header{display:flex;justify-content:space-between;
+  align-items:flex-end;margin-bottom:36px;gap:16px;flex-wrap:wrap;}
+.cars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;}
+.car-card{background:#fff;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);transition:all .3s;cursor:pointer;}
+.car-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent;}
+.car-img{position:relative;height:220px;overflow:hidden;
+  background:#f1f3f5;display:flex;align-items:center;justify-content:center;}
+.car-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.car-card:hover .car-img img{transform:scale(1.06);}
+.car-img-placeholder{font-size:56px;color:#ddd;}
+.car-badge{position:absolute;top:12px;left:12px;padding:5px 11px;
+  border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.2px;}
+.b-disp{background:rgba(16,185,129,.12);color:#059669;}
+.b-vend{background:rgba(239,68,68,.12);color:#DC2626;}
+.b-res {background:rgba(245,158,11,.13);color:#D97706;}
+.car-body{padding:20px;}
+.car-brand{font-size:11px;font-weight:700;color:var(--accent-dark);
+  text-transform:uppercase;letter-spacing:.5px;}
+.car-name{font-family:var(--fd);font-size:19px;font-weight:600;
+  color:var(--dark);margin:4px 0 12px;line-height:1.2;}
+.car-specs{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px;}
+.spec{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--gray);}
+.car-footer{display:flex;justify-content:space-between;align-items:center;
+  padding-top:14px;border-top:1px solid var(--border);}
+.car-price{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--dark);}
+.car-price small{font-size:11px;color:var(--gray);font-family:var(--fb);
+  font-weight:400;display:block;margin-bottom:1px;}
+
+/* ── FILTERS ── */
+.filters-bar{background:#fff;border-bottom:1px solid var(--border);
+  padding:14px 24px;position:sticky;top:68px;z-index:100;}
+.filters-in{max-width:1200px;margin:0 auto;display:flex;
+  gap:10px;flex-wrap:wrap;align-items:center;}
+.f-inp{flex:1;min-width:180px;padding:9px 14px;border:1.5px solid var(--border);
+  border-radius:8px;font-size:13px;font-family:var(--fb);
+  background:var(--bg);color:var(--dark);outline:none;transition:.2s;}
+.f-inp:focus{border-color:var(--accent);background:#fff;}
+.f-sel{padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;
+  font-size:13px;font-family:var(--fb);background:var(--bg);
+  color:var(--dark);outline:none;cursor:pointer;min-width:130px;}
+.f-sel:focus{border-color:var(--accent);}
+.res-count{font-size:12px;color:var(--gray);margin-left:auto;white-space:nowrap;}
+
+/* ── DETAIL ── */
+.detail-top{background:var(--navy);padding:32px 24px;}
+.detail-top .container{display:flex;align-items:center;gap:16px;}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:#8892A4;
+  text-decoration:none;font-size:14px;transition:.2s;border:none;
+  background:transparent;cursor:pointer;font-family:var(--fb);padding:0;}
+.back-btn:hover{color:#fff;}
+.detail-grid{display:grid;grid-template-columns:1fr 370px;gap:40px;
+  align-items:start;padding:40px 24px;max-width:1200px;margin:0 auto;}
+.gallery{border-radius:var(--radius);overflow:hidden;background:#0d1117;
+  aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;
+  width:100%;max-width:100%;}
+.gallery img{width:100%;height:100%;object-fit:contain;}
+.gallery-ph{font-size:80px;color:#ccc;}
+.detail-sidebar{position:sticky;top:100px;}
+.d-card{background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;margin-bottom:14px;}
+.d-price{font-family:var(--fd);font-size:34px;font-weight:700;color:var(--dark);}
+.d-name{font-family:var(--fd);font-size:26px;font-weight:700;
+  color:var(--dark);margin:6px 0 20px;line-height:1.2;}
+.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+.spec-box{background:var(--bg);border-radius:8px;padding:13px;}
+.sb-lbl{font-size:10px;font-weight:700;color:var(--gray);
+  text-transform:uppercase;letter-spacing:.5px;}
+.sb-val{font-size:15px;font-weight:700;color:var(--dark);margin-top:4px;}
+.wpp-btn{width:100%;background:#25D366;color:#fff;border:none;padding:15px;
+  border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:.2s;font-family:var(--fb);}
+.wpp-btn:hover{background:#1da851;transform:translateY(-1px);}
+.call-btn{width:100%;background:var(--navy);color:#fff;border:none;padding:13px;
+  border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:.2s;font-family:var(--fb);margin-top:10px;}
+.call-btn:hover{background:#0D1117;}
+.d-desc{font-size:15px;color:var(--gray);line-height:1.75;margin-top:16px;}
+
+/* ── ABOUT ── */
+.about-hero{background:linear-gradient(135deg,#0D1117,#1A1A2E);
+  padding:72px 24px;text-align:center;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;}
+.val-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px;transition:.2s;}
+.val-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(232,200,64,.15);}
+.val-icon{font-size:22px;margin-bottom:8px;}
+.val-title{font-weight:700;color:var(--dark);margin-bottom:5px;font-size:15px;}
+.val-text{font-size:13px;color:var(--gray);}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px;}
+.c-icon{width:42px;height:42px;background:rgba(232,200,64,.12);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.c-form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:32px;}
+.f-label{display:block;font-size:12px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.f-field{width:100%;padding:11px 14px;border:1.5px solid var(--border);
+  border-radius:8px;font-size:13px;font-family:var(--fb);
+  background:var(--bg);color:var(--dark);outline:none;transition:.2s;
+  margin-bottom:14px;}
+.f-field:focus{border-color:var(--accent);background:#fff;}
+textarea.f-field{resize:vertical;min-height:110px;}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.map-wrap{margin-top:20px;border-radius:var(--radius);overflow:hidden;height:220px;}
+.map-wrap iframe{width:100%;height:100%;border:0;}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);color:#6B7280;padding:56px 24px 32px;}
+.footer-grid{max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+.footer-brand p{font-size:13px;margin-top:12px;line-height:1.75;color:#4A5568;}
+.footer-col h4{color:#fff;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;}
+.footer-col a{display:block;font-size:13px;color:#4A5568;
+  text-decoration:none;margin-bottom:9px;transition:.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:24px;
+  border-top:1px solid #1F2937;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;font-size:12px;}
+
+/* ── WPP FLOAT ── */
+.wpp-float{position:fixed;bottom:28px;right:28px;z-index:997;
+  width:56px;height:56px;background:#25D366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  cursor:pointer;transition:.3s;text-decoration:none;}
+.wpp-float:hover{transform:scale(1.1);}
+.wpp-float svg{width:26px;height:26px;fill:#fff;}
+.wpp-pulse{position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid rgba(37,211,102,.35);animation:pulse 2.2s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1;}60%{transform:scale(1.18);opacity:0;}}
+
+/* ── CARRO EM DESTAQUE ── */
+.hype-section{background:linear-gradient(135deg,var(--navy) 0%,#0d1326 100%);
+  padding:56px 24px;position:relative;overflow:hidden;}
+.hype-section::before{content:'🔥 EM PROMOÇÃO';position:absolute;
+  top:22px;left:50%;transform:translateX(-50%);
+  background:var(--accent);color:var(--navy);
+  font-size:11px;font-weight:800;letter-spacing:1.5px;
+  padding:5px 20px;border-radius:100px;white-space:nowrap;}
+.hype-card{max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(232,200,64,.25);
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 0 60px rgba(232,200,64,.08);
+  cursor:pointer;transition:transform .3s,box-shadow .3s;}
+.hype-card:hover{transform:translateY(-4px);
+  box-shadow:0 12px 60px rgba(232,200,64,.15);}
+.hype-img{position:relative;min-height:300px;
+  background:#0d1117;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;}
+.hype-img img{width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;}
+.hype-card:hover .hype-img img{transform:scale(1.04);}
+.hype-img-ph{font-size:80px;color:rgba(255,255,255,.1);}
+.hype-ribbon{position:absolute;top:16px;left:16px;
+  background:var(--accent);color:var(--navy);
+  font-size:11px;font-weight:800;letter-spacing:.5px;
+  padding:5px 14px;border-radius:6px;}
+.hype-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;}
+.hype-marca{font-size:11px;font-weight:700;color:var(--accent);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.hype-nome{font-family:var(--fd);font-size:clamp(22px,3vw,32px);
+  font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;}
+.hype-specs{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;}
+.hype-spec{display:flex;align-items:center;gap:6px;
+  font-size:13px;color:#8892A4;}
+.hype-prices{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;}
+.hype-price-old{font-size:16px;color:#6B7280;text-decoration:line-through;}
+.hype-price-new{font-family:var(--fd);font-size:clamp(28px,4vw,40px);
+  font-weight:700;color:var(--accent);line-height:1;}
+.hype-economy{font-size:12px;font-weight:700;
+  background:rgba(16,185,129,.15);color:#34d399;
+  padding:3px 10px;border-radius:100px;white-space:nowrap;}
+.hype-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-hype-wpp{display:inline-flex;align-items:center;gap:8px;
+  padding:13px 24px;background:#25D366;color:#fff;
+  border-radius:8px;font-size:14px;font-weight:700;
+  border:none;cursor:pointer;transition:.2s;font-family:var(--fb);}
+.btn-hype-wpp:hover{background:#1da851;transform:translateY(-1px);}
+.btn-hype-ver{display:inline-flex;align-items:center;gap:8px;
+  padding:13px 24px;background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,.25);
+  border-radius:8px;font-size:14px;font-weight:600;
+  cursor:pointer;transition:.2s;font-family:var(--fb);}
+.btn-hype-ver:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5);}
+@media(max-width:760px){
+  .hype-card{grid-template-columns:1fr;}
+  .hype-img{min-height:220px;}
+  .hype-body{padding:28px 24px;}
+}
+
+/* ── FLIP CARDS — DIFERENCIAIS ── */
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;}
+.flip-wrap{height:200px;perspective:1000px;cursor:pointer;}
+/* Desktop: flip on hover */
+@media(hover:hover){
+  .flip-wrap:hover .flip-inner{transform:rotateY(180deg);}
+}
+/* Mobile: flip on tap via .tapped class toggled by JS */
+@media(hover:none){
+  .flip-wrap.tapped .flip-inner{transform:rotateY(180deg);}
+}
+.flip-inner{position:relative;width:100%;height:100%;
+  transition:transform .55s cubic-bezier(.4,0,.2,1);
+  transform-style:preserve-3d;}
+.flip-front,.flip-back{position:absolute;inset:0;
+  border-radius:12px;padding:28px;text-align:center;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.flip-front{background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.07);}
+.flip-back{background:var(--accent);
+  border:1px solid var(--accent);
+  transform:rotateY(180deg);}
+.flip-icon{font-size:30px;margin-bottom:12px;transition:transform .3s;}
+.flip-wrap:hover .flip-front .flip-icon{transform:scale(1.15);}
+.flip-title{font-family:var(--fd);color:#fff;font-size:17px;font-weight:600;margin-bottom:6px;}
+.flip-sub{font-size:13px;color:#6B7280;line-height:1.6;}
+.flip-back-title{font-family:var(--fd);color:var(--navy);font-size:16px;
+  font-weight:700;margin-bottom:10px;line-height:1.2;}
+.flip-back-text{font-size:13px;color:var(--navy);line-height:1.65;opacity:.85;}
+.flip-back-icon{font-size:26px;margin-bottom:12px;}
+.loading{text-align:center;padding:60px;color:var(--gray);font-size:15px;}
+.loading::before{content:"";display:block;width:32px;height:32px;
+  border:3px solid var(--border);border-top-color:var(--accent-dark);
+  border-radius:50%;margin:0 auto 16px;animation:spin .7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.empty{text-align:center;padding:72px 24px;color:var(--gray);}
+.empty-icon{font-size:48px;margin-bottom:14px;}
+.empty h3{font-family:var(--fd);font-size:22px;color:var(--dark);margin-bottom:8px;}
+
+/* Mobile: show tap hint, hide hover hint */
+@media(hover:none){
+  .flip-hint-desktop{display:none !important;}
+  .flip-hint-mobile{display:block !important;}
+}
+/* Detail grid generated by JS — override any inline padding on mobile */
+@media(max-width:900px){
+  #detailContent > .detail-grid{padding:0 !important;}
+}
+.toast{position:fixed;bottom:96px;right:28px;background:var(--dark);
+  color:#fff;padding:13px 20px;border-radius:10px;font-size:13px;
+  z-index:9999;transform:translateY(10px);opacity:0;transition:.3s;
+  box-shadow:var(--shadow-lg);}
+.toast.show{transform:translateY(0);opacity:1;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  /* Detail: stack gallery above sidebar */
+  .detail-grid{
+    grid-template-columns:1fr;
+    gap:0;
+    padding:0;
+  }
+  .detail-sidebar{position:static;}
+  /* Gallery full width on tablet */
+  .gallery{border-radius:0;aspect-ratio:16/9;}
+  /* Sidebar below gallery, with padding */
+  .detail-sidebar{padding:20px 20px 0;}
+  .d-card{padding:20px;}
+  .d-name{font-size:20px;}
+  .d-price{font-size:26px;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;position:fixed;top:68px;left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--border);
+    flex-direction:column;padding:12px;z-index:998;}
+  .nav-links.open{display:flex;}
+  .hamburger{display:flex;}
+  .nav-cta{display:none;}
+  .cars-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:28px;}
+  .about-values,.f-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .specs-grid{grid-template-columns:1fr 1fr;}
+  .section{padding:56px 16px;}
+  /* Detail mobile full bleed */
+  .detail-grid{padding:0;}
+  .gallery{aspect-ratio:4/3;border-radius:0;}
+  /* Gallery navigation arrows bigger on mobile */
+  #galleryWrap button{width:44px !important;height:44px !important;font-size:22px !important;}
+  /* Sidebar mobile padding */
+  .detail-sidebar{padding:16px 16px 0;}
+  .d-card{padding:18px;margin-bottom:10px;}
+  .d-name{font-size:18px;margin-bottom:14px;}
+  .d-price{font-size:24px;}
+  .specs-grid{gap:8px;}
+  .spec-box{padding:10px;}
+  .sb-val{font-size:13px;}
+  /* Thumbnails scroll on mobile */
+  #thumbsRow{padding-bottom:6px !important;}
+  #thumbsRow img{width:60px !important;height:44px !important;}
+  /* Hype card mobile */
+  .hype-card{grid-template-columns:1fr;}
+  .hype-img{min-height:200px;}
+  .hype-body{padding:22px 18px;}
+  .hype-prices{flex-wrap:wrap;gap:8px;}
+  /* Flip grid 2 columns on mobile */
+  .flip-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .flip-wrap{height:175px;}
+  .flip-title{font-size:14px;}
+  .flip-sub{font-size:11px;}
+  .flip-back-title{font-size:13px;}
+  .flip-back-text{font-size:11px;}
+  .flip-back-icon{font-size:20px;margin-bottom:8px;}
+  .flip-front,.flip-back{padding:16px 12px;}
+  /* Hint text for mobile flip */
+  .flip-mobile-hint{display:block !important;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#" onclick="nav('home')">
+      <div class="logo-mark">
+        <img class="logo-dark" src="images/logo.png" alt="Av1Automóveis">
+        <img class="logo-light" src="images/logo_white.png" alt="Av1Automóveis">
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#" onclick="nav('home')"  id="nl-home"    class="active">Home</a>
+      <a href="#" onclick="nav('cars')"  id="nl-cars">Carros</a>
+      <a href="#" onclick="nav('about')" id="nl-about">Sobre Nós</a>
+      <a href="#" onclick="nav('contact')" id="nl-contact">Contato</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="https://wa.me/5511999999999" target="_blank">
+        💬 WhatsApp
+      </a>
+    </div>
+    <div class="hamburger" id="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HOME ══════════════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb1"></div>
+    <div class="hero-orb2"></div>
+    <div class="hero-content">
+      <img src="images/logo_white.png" alt="Av1Automóveis" style="height:52px;width:auto;margin-bottom:28px;display:block;">
+      <div class="hero-badge">📍 Pirituba · São Paulo</div>
+      <h1>Seu próximo<br>carro está <em>aqui.</em></h1>
+      <p>Seminovos selecionados com procedência garantida. Atendimento honesto e financiamento nas melhores condições.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#" onclick="nav('cars')">Ver Estoque Completo</a>
+        <a class="btn btn-outline" href="https://wa.me/5511999999999" target="_blank"
+           style="color:#fff;border-color:rgba(255,255,255,.25);">Falar com Vendedor</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" id="stat-disp">—</div><div class="stat-lbl">Disponíveis agora</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-lbl">Procedência verificada</div></div>
+        <div><div class="stat-num">12×</div><div class="stat-lbl">Parcelamento facilitado</div></div>
+        <div><div class="stat-num">4.9⭐</div><div class="stat-lbl">Avaliação Google</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CARRO EM DESTAQUE ── -->
+  <div id="hypeSection"></div>
+
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="cars-header">
+        <div>
+          <span class="section-tag">Destaques</span>
+          <h2 class="section-title">Veículos em Destaque</h2>
+        </div>
+        <a class="btn btn-outline" href="#" onclick="nav('cars')">Ver todos →</a>
+      </div>
+      <div class="cars-grid" id="featuredGrid"><div class="loading"></div></div>
+    </div>
+  </section>
+
+  <!-- ── DIFERENCIAIS COM FLIP ── -->
+  <section class="section" style="background:var(--navy);">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:44px;">
+        <span class="section-tag" style="background:rgba(232,200,64,.18);color:var(--accent);">Diferenciais</span>
+        <h2 class="section-title" style="color:#fff;">Por que escolher a Av1?</h2>
+        <p class="flip-hint-desktop" style="color:#6B7280;font-size:13px;margin-top:8px;">Passe o mouse para saber mais 👆</p>
+        <p class="flip-hint-mobile" style="color:#6B7280;font-size:13px;margin-top:8px;display:none;">Toque nos cards para saber mais 👇</p>
+      </div>
+      <div class="flip-grid">
+
+        <div class="flip-wrap" onclick="this.classList.toggle('tapped')">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="flip-icon">🔍</div>
+              <div class="flip-title">Vistoria Completa</div>
+              <div class="flip-sub">Inspeção técnica antes de entrar no estoque.</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-icon">✅</div>
+              <div class="flip-back-title">Checklist com +50 itens</div>
+              <div class="flip-back-text">Motor, freios, suspensão, elétrica, lataria e histórico. Só entra no estoque quem passa em tudo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-wrap" onclick="this.classList.toggle('tapped')">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="flip-icon">💳</div>
+              <div class="flip-title">Financiamento Fácil</div>
+              <div class="flip-sub">Parceria com os principais bancos do país.</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-icon">🏦</div>
+              <div class="flip-back-title">Aprovação em minutos</div>
+              <div class="flip-back-text">Trabalhamos com Bradesco, Itaú, Santander e BV. Simulamos na hora e buscamos a menor taxa para você.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-wrap" onclick="this.classList.toggle('tapped')">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="flip-icon">📋</div>
+              <div class="flip-title">Documentação OK</div>
+              <div class="flip-sub">IPVA pago, transferência inclusa.</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-icon">🖊️</div>
+              <div class="flip-back-title">Zero burocracia</div>
+              <div class="flip-back-text">Cuidamos de toda a papelada por você. Débitos quitados, multas verificadas e transferência garantida no ato.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-wrap" onclick="this.classList.toggle('tapped')">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="flip-icon">🤝</div>
+              <div class="flip-title">Pós-venda</div>
+              <div class="flip-sub">Suporte garantido após a compra.</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-icon">❤️</div>
+              <div class="flip-back-title">Parceiros para sempre</div>
+              <div class="flip-back-text">Tem dúvida depois da compra? Pode ligar. Nosso relacionamento não termina na assinatura do contrato.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--accent);text-align:center;">
+    <div class="container">
+      <h2 class="section-title" style="color:var(--navy);margin-bottom:10px;">Não encontrou o que procura?</h2>
+      <p style="color:rgba(28,35,64,.7);margin-bottom:28px;">Fale com nossa equipe — podemos encontrar o veículo ideal para você.</p>
+      <a class="btn" href="https://wa.me/5511999999999" target="_blank" style="background:var(--navy);color:#fff;padding:14px 32px;font-size:15px;">💬 Falar no WhatsApp</a>
+    </div>
+  </section>
+</div>
+
+<!-- ══ CARS ═══════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-cars">
+  <div class="filters-bar">
+    <div class="filters-in">
+      <input class="f-inp" id="srch" type="text" placeholder="🔍  Buscar modelo ou marca..." oninput="filterCars()">
+      <select class="f-sel" id="fMarca" onchange="filterCars()">
+        <option value="">Todas as marcas</option>
+      </select>
+      <select class="f-sel" id="fComb" onchange="filterCars()">
+        <option value="">Combustível</option>
+        <option>Flex</option><option>Gasolina</option><option>Etanol</option>
+        <option>Diesel</option><option>Elétrico</option><option>Híbrido</option><option>GNV</option>
+      </select>
+      <select class="f-sel" id="fStatus" onchange="filterCars()">
+        <option value="">Todos</option>
+        <option value="disponivel">Disponível</option>
+        <option value="reservado">Reservado</option>
+        <option value="vendido">Vendido</option>
+      </select>
+      <span class="res-count" id="resCount"></span>
+    </div>
+  </div>
+  <section class="section" style="padding-top:28px;">
+    <div class="container">
+      <div style="margin-bottom:28px;">
+        <span class="section-tag">Estoque</span>
+        <h2 class="section-title">Todos os Veículos</h2>
+      </div>
+      <div class="cars-grid" id="carsGrid"><div class="loading"></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ DETAIL ══════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-detail">
+  <div class="detail-top">
+    <div class="container">
+      <button class="back-btn" onclick="goBack()">← Voltar ao estoque</button>
+    </div>
+  </div>
+  <div id="detailContent" style="padding-bottom:60px;"></div>
+</div>
+
+<!-- ══ ABOUT ═══════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="container">
+      <span class="section-tag" style="background:rgba(232,200,64,.18);color:var(--accent);">Nossa história</span>
+      <h1 style="font-family:var(--fd);font-size:clamp(32px,5vw,52px);color:#fff;margin:10px 0 12px;">Sobre a Av1Automóveis</h1>
+      <p style="color:#8892A4;font-size:15px;max-width:500px;margin:0 auto;">Tradição, transparência e cuidado em cada negociação, aqui em Pirituba.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="section-tag">Quem somos</span>
+          <h2 class="section-title">Tradição e confiança em cada negociação</h2>
+          <p style="color:var(--gray);margin-top:16px;font-size:15px;line-height:1.8;">A Av1Automóveis nasceu com um propósito simples: oferecer veículos de qualidade com atendimento transparente e honesto. Localizada em Pirituba, nossa equipe é apaixonada por carros e comprometida com a satisfação total do cliente.</p>
+          <p style="color:var(--gray);margin-top:14px;font-size:15px;line-height:1.8;">Cada veículo que entra no nosso estoque passa por vistoria técnica minuciosa. Trabalhamos somente com carros de procedência comprovada, sem vícios ocultos e com documentação impecável.</p>
+          <div style="display:flex;gap:40px;margin-top:32px;flex-wrap:wrap;">
+            <div><div style="font-family:var(--fd);font-size:34px;font-weight:700;color:var(--navy);">5+</div><div style="font-size:12px;color:var(--gray);">Anos no mercado</div></div>
+            <div><div style="font-family:var(--fd);font-size:34px;font-weight:700;color:var(--navy);">500+</div><div style="font-size:12px;color:var(--gray);">Clientes satisfeitos</div></div>
+            <div><div style="font-family:var(--fd);font-size:34px;font-weight:700;color:var(--navy);">4.9⭐</div><div style="font-size:12px;color:var(--gray);">Avaliação Google</div></div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--navy) 0%,#0d1326 100%);border-radius:16px;height:360px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;border:1px solid rgba(232,200,64,.15);">
+          <img src="images/logo_white.png" alt="Av1Automóveis" style="height:60px;width:auto;object-fit:contain;opacity:.95;">
+          <div style="width:48px;height:2px;background:var(--accent);border-radius:2px;"></div>
+          <div style="font-size:13px;color:#6B7280;letter-spacing:.5px;">Pirituba · São Paulo</div>
+        </div>
+      </div>
+      <div style="margin-top:64px;">
+        <div style="text-align:center;margin-bottom:32px;">
+          <span class="section-tag">Valores</span>
+          <h2 class="section-title">O que nos guia</h2>
+        </div>
+        <div class="about-values">
+          <div class="val-card"><div class="val-icon">🏆</div><div class="val-title">Qualidade</div><div class="val-text">Somente veículos que passariam em nossas próprias garagens.</div></div>
+          <div class="val-card"><div class="val-icon">💬</div><div class="val-title">Transparência</div><div class="val-text">Histórico completo, sem surpresas no contrato ou na entrega.</div></div>
+          <div class="val-card"><div class="val-icon">⚡</div><div class="val-title">Agilidade</div><div class="val-text">Processo de compra simplificado, pronto em poucas horas.</div></div>
+          <div class="val-card"><div class="val-icon">❤️</div><div class="val-title">Respeito</div><div class="val-text">Cada cliente é tratado com atenção e cuidado individuais.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="about-hero">
+    <div class="container" style="text-align:center;">
+      <span class="section-tag" style="background:rgba(232,200,64,.18);color:var(--accent);">Fale conosco</span>
+      <h1 style="font-family:var(--fd);font-size:clamp(32px,5vw,52px);color:#fff;margin:10px 0;">Entre em Contato</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-family:var(--fd);font-size:26px;font-weight:700;margin-bottom:16px;">Prontos para te atender</h3>
+          <p style="color:var(--gray);margin-bottom:28px;font-size:14px;line-height:1.75;">Segunda a Sábado. Entre em contato pelo canal de sua preferência.</p>
+          <div class="contact-item"><div class="c-icon">📍</div><div><b>Endereço</b><br><span style="color:var(--gray);font-size:13px;">Rua Exemplo, 000 — Pirituba<br>São Paulo, SP — CEP 05000-000</span></div></div>
+          <div class="contact-item"><div class="c-icon">📞</div><div><b>WhatsApp / Telefone</b><br><span style="color:var(--gray);font-size:13px;">(11) 99999-9999</span></div></div>
+          <div class="contact-item"><div class="c-icon">🕐</div><div><b>Horário</b><br><span style="color:var(--gray);font-size:13px;">Seg–Sex: 09h às 18h · Sáb: 09h às 14h</span></div></div>
+          <div class="contact-item"><div class="c-icon">✉️</div><div><b>E-mail</b><br><span style="color:var(--gray);font-size:13px;">contato@av1automoveis.com.br</span></div></div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14630.4!2d-46.7200!3d-23.5000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPirituba!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="c-form">
+          <h3 style="font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:22px;">Envie uma mensagem</h3>
+          <div class="f-row">
+            <div><label class="f-label">Nome *</label><input class="f-field" id="cNome" type="text" placeholder="Seu nome"></div>
+            <div><label class="f-label">Telefone *</label><input class="f-field" id="cTel" type="tel" placeholder="(11) 99999-9999"></div>
+          </div>
+          <label class="f-label">E-mail</label>
+          <input class="f-field" id="cEmail" type="email" placeholder="seu@email.com">
+          <label class="f-label">Assunto</label>
+          <select class="f-field" id="cAssunto">
+            <option>Interesse em um veículo</option>
+            <option>Informações sobre financiamento</option>
+            <option>Quero vender meu carro</option>
+            <option>Outro assunto</option>
+          </select>
+          <label class="f-label">Mensagem</label>
+          <textarea class="f-field" id="cMsg" placeholder="Como podemos te ajudar?"></textarea>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px;" onclick="sendForm()">Enviar pelo WhatsApp →</button>
+          <p style="font-size:11px;color:var(--gray);text-align:center;margin-top:10px;">Redirecionamos para o WhatsApp para resposta mais rápida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo logo-on-dark">
+        <div class="logo-mark">
+          <img class="logo-dark" src="images/logo.png" alt="Av1Automóveis">
+          <img class="logo-light" src="images/logo_white.png" alt="Av1Automóveis">
+        </div>
+      </div>
+      <p>Seminovos de qualidade em Pirituba, São Paulo. Procedência garantida e financiamento facilitado.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <a href="#" onclick="nav('home')">Home</a>
+      <a href="#" onclick="nav('cars')">Estoque</a>
+      <a href="#" onclick="nav('about')">Sobre Nós</a>
+      <a href="#" onclick="nav('contact')">Contato</a>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <a href="#">Financiamento</a>
+      <a href="#">Avaliação de Troca</a>
+      <a href="#">Transferência</a>
+      <a href="#">Pós-venda</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <a href="tel:+5511999999999">(11) 99999-9999</a>
+      <a href="mailto:contato@av1automoveis.com.br">contato@av1automoveis.com.br</a>
+      <a href="#">Pirituba, São Paulo</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Av1Automóveis. Todos os direitos reservados.</span>
+    <span>Pirituba · São Paulo · Brasil</span>
+  </div>
+</footer>
+
+<a class="wpp-float" href="https://wa.me/5511999999999" target="_blank">
+  <div class="wpp-pulse"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="toast" id="toast"></div>
+
+<script>
+// ── CONFIG — altere o número aqui ────────────────────────────────────────────
+const WPP = '5511999999999'; // << coloque o número real (sem + e sem espaços)
+
+// ── DATA ─────────────────────────────────────────────────────────────────────
+let CARS = [];
+let prevPage = 'cars';
+
+async function loadCars() {
+  if (CARS.length) return CARS;
+  try {
+    const r = await fetch('./carros.json?v=' + Date.now());
+    if (!r.ok) throw 0;
+    CARS = await r.json();
+  } catch {
+    CARS = [
+      {id:1,nome:'Corolla XEi 2.0',marca:'Toyota',ano:2022,preco:95000,quilometragem:32000,potencia:'177cv',combustivel:'Flex',cambio:'Automático',descricao:'Toyota Corolla XEi em excelente estado.',imagem_path:'',status:'disponivel'},
+      {id:2,nome:'Civic EXL 1.5 Turbo',marca:'Honda',ano:2023,preco:142000,quilometragem:18000,potencia:'173cv',combustivel:'Flex',cambio:'CVT',descricao:'Honda Civic totalmente equipado.',imagem_path:'',status:'disponivel'},
+      {id:3,nome:'HB20 Comfort 1.0',marca:'Hyundai',ano:2021,preco:62000,quilometragem:45000,potencia:'80cv',combustivel:'Flex',cambio:'Manual',descricao:'HB20 econômico e conservado.',imagem_path:'',status:'disponivel'},
+    ];
+  }
+  return CARS;
+}
+
+function R(n){ return 'R$ ' + Number(n).toLocaleString('pt-BR',{minimumFractionDigits:0}); }
+function KM(k){ return Number(k).toLocaleString('pt-BR') + ' km'; }
+
+function getImgs(c){
+  // suporta tanto campo "imagens" (array) quanto legado "imagem_path" (string)
+  if(Array.isArray(c.imagens) && c.imagens.length) return c.imagens;
+  if(c.imagem_path) return [c.imagem_path];
+  return [];
+}
+
+function cardHTML(c){
+  const bd = {disponivel:'b-disp',vendido:'b-vend',reservado:'b-res'}[c.status]||'b-disp';
+  const bl = {disponivel:'Disponível',vendido:'Vendido',reservado:'Reservado'}[c.status]||'Disponível';
+  const imgs = getImgs(c);
+  const img  = imgs.length
+    ? `<img src="${imgs[0]}" alt="${c.nome}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+    : '';
+  const ph = `<div class="car-img-placeholder" style="display:${imgs.length?'none':'flex'}">🚗</div>`;
+  const fotoBadge = imgs.length > 1
+    ? `<span style="position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;">📷 ${imgs.length}</span>`
+    : '';
+  return `<div class="car-card" onclick="showDetail(${c.id})">
+    <div class="car-img">${img}${ph}<span class="car-badge ${bd}">${bl}</span>${fotoBadge}</div>
+    <div class="car-body">
+      <div class="car-brand">${c.marca} · ${c.ano}</div>
+      <div class="car-name">${c.nome}</div>
+      <div class="car-specs">
+        <span class="spec">🛣 ${KM(c.quilometragem)}</span>
+        <span class="spec">⛽ ${c.combustivel}</span>
+        <span class="spec">⚙️ ${c.cambio}</span>
+        ${c.potencia?`<span class="spec">⚡ ${c.potencia}</span>`:''}
+      </div>
+      <div class="car-footer">
+        <div class="car-price"><small>a partir de</small>${R(c.preco)}</div>
+        <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showDetail(${c.id})">Ver mais</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── PAGES ─────────────────────────────────────────────────────────────────────
+function nav(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  const nl = document.getElementById('nl-'+p);
+  if(nl) nl.classList.add('active');
+  window.scrollTo(0,0);
+  document.getElementById('navLinks').classList.remove('open');
+  if(p==='home')    renderHome();
+  if(p==='cars')    renderCars();
+}
+
+async function renderHome(){
+  const g = document.getElementById('featuredGrid');
+  g.innerHTML = '<div class="loading"></div>';
+  await loadCars();
+  const avail = CARS.filter(c=>c.status==='disponivel');
+  document.getElementById('stat-disp').textContent = avail.length;
+
+  // ── Carro em destaque ──
+  const hype = avail.find(c=>c.destaque);
+  const hypeEl = document.getElementById('hypeSection');
+  if(hype){
+    const imgs = getImgs(hype);
+    const imgHTML = imgs.length
+      ? `<img src="${imgs[0]}" alt="${hype.nome}" loading="lazy"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      : '';
+    const phHTML = `<div class="hype-img-ph" style="display:${imgs.length?'none':'flex'}">🚗</div>`;
+    const precoNormal = hype.preco_original && hype.preco_original > hype.preco
+      ? `<span class="hype-price-old">${R(hype.preco_original)}</span>` : '';
+    const economia = hype.preco_original && hype.preco_original > hype.preco
+      ? `<span class="hype-economy">💰 Economia de ${R(hype.preco_original - hype.preco)}</span>` : '';
+    const msg = encodeURIComponent(`Olá! Vi o *${hype.nome} ${hype.ano}* em promoção no site da Av1Automóveis. Tenho interesse!`);
+
+    hypeEl.innerHTML = `
+    <section class="hype-section">
+      <div class="hype-card" onclick="showDetail(${hype.id})">
+        <div class="hype-img">
+          ${imgHTML}${phHTML}
+          <div class="hype-ribbon">🔥 Oportunidade</div>
+        </div>
+        <div class="hype-body">
+          <div class="hype-marca">${hype.marca} · ${hype.ano}</div>
+          <div class="hype-nome">${hype.nome}</div>
+          <div class="hype-specs">
+            <span class="hype-spec">🛣 ${KM(hype.quilometragem)}</span>
+            <span class="hype-spec">⛽ ${hype.combustivel}</span>
+            <span class="hype-spec">⚙️ ${hype.cambio}</span>
+            ${hype.potencia?`<span class="hype-spec">⚡ ${hype.potencia}</span>`:''}
+          </div>
+          <div class="hype-prices">
+            ${precoNormal}
+            <span class="hype-price-new">${R(hype.preco)}</span>
+            ${economia}
+          </div>
+          <div class="hype-actions">
+            <button class="btn-hype-wpp" onclick="event.stopPropagation();window.open('https://wa.me/${WPP}?text=${msg}','_blank')">
+              <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Quero esta oferta
+            </button>
+            <button class="btn-hype-ver" onclick="event.stopPropagation();showDetail(${hype.id})">Ver detalhes →</button>
+          </div>
+        </div>
+      </div>
+    </section>`;
+  } else {
+    hypeEl.innerHTML = '';
+  }
+
+  // ── Cards em destaque (exclui o hype para não repetir) ──
+  const feat = avail.filter(c=>!c.destaque).slice(0,3);
+  g.innerHTML = feat.length ? feat.map(cardHTML).join('') :
+    '<div class="empty"><div class="empty-icon">🚗</div><h3>Em breve novidades</h3></div>';
+}
+
+async function renderCars(){
+  const g = document.getElementById('carsGrid');
+  g.innerHTML = '<div class="loading"></div>';
+  await loadCars();
+  // populate marca filter
+  const sel = document.getElementById('fMarca');
+  const marcas = [...new Set(CARS.map(c=>c.marca))].sort();
+  sel.innerHTML = '<option value="">Todas as marcas</option>' + marcas.map(m=>`<option>${m}</option>`).join('');
+  filterCars();
+}
+
+function filterCars(){
+  const s = document.getElementById('srch').value.toLowerCase();
+  const m = document.getElementById('fMarca').value;
+  const cb = document.getElementById('fComb').value;
+  const st = document.getElementById('fStatus').value;
+  const f = CARS.filter(c=>{
+    if(s && !c.nome.toLowerCase().includes(s) && !c.marca.toLowerCase().includes(s)) return false;
+    if(m  && c.marca!==m)      return false;
+    if(cb && c.combustivel!==cb) return false;
+    if(st && c.status!==st)    return false;
+    return true;
+  });
+  document.getElementById('resCount').textContent = `${f.length} veículo${f.length!==1?'s':''}`;
+  const g = document.getElementById('carsGrid');
+  g.innerHTML = f.length ? f.map(cardHTML).join('') :
+    '<div class="empty"><div class="empty-icon">🔍</div><h3>Nenhum veículo encontrado</h3><p>Tente ajustar os filtros.</p></div>';
+}
+
+async function showDetail(id){
+  prevPage = document.querySelector('.page.active').id.replace('page-','');
+  await loadCars();
+  const c = CARS.find(x=>x.id===id);
+  if(!c) return;
+
+  const imgs = getImgs(c);
+  let curImg = 0;
+
+  function galleryHTML(){
+    if(!imgs.length) return '<div class="gallery"><div class="gallery-ph">🚗</div></div>';
+    return `
+    <div class="gallery" id="mainGallery" style="position:relative;background:#0d1117;">
+      <img id="galleryMain" src="${imgs[curImg]}" alt="${c.nome}"
+           style="width:100%;height:100%;object-fit:contain;"
+           onerror="this.src='';this.parentElement.innerHTML='<div class=gallery-ph>🚗</div>'">
+      ${imgs.length>1?`
+      <button onclick="changeImg(-1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+      <button onclick="changeImg(1)"  style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">›</button>
+      <div id="imgCounter" style="position:absolute;bottom:10px;right:14px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">
+        ${curImg+1} / ${imgs.length}
+      </div>`:''}
+    </div>
+    ${imgs.length>1?`
+    <div id="thumbsRow" style="display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px;">
+      ${imgs.map((src,i)=>`
+        <img src="${src}" onclick="jumpImg(${i})"
+          style="width:72px;height:52px;object-fit:cover;border-radius:6px;cursor:pointer;
+                 border:2px solid ${i===curImg?'var(--accent2)':'transparent'};flex-shrink:0;
+                 opacity:${i===curImg?'1':'.65'};transition:.2s;"
+          onerror="this.style.display='none'">`).join('')}
+    </div>`:''}`;
+  }
+
+  const bd = {disponivel:'<span class="car-badge b-disp" style="position:static;display:inline-flex;margin-bottom:10px;">✅ Disponível</span>',
+    vendido:'<span class="car-badge b-vend" style="position:static;display:inline-flex;margin-bottom:10px;">🏁 Vendido</span>',
+    reservado:'<span class="car-badge b-res" style="position:static;display:inline-flex;margin-bottom:10px;">⏳ Reservado</span>'}[c.status]||'';
+  const msg = encodeURIComponent(`Olá! Vi o *${c.nome} ${c.ano}* no site da Av1Automóveis. Tenho interesse! Pode me passar mais informações?`);
+
+  document.getElementById('detailContent').innerHTML = `
+  <div class="detail-grid" style="padding:40px 24px;">
+    <div>
+      <div id="galleryWrap">${galleryHTML()}</div>
+      <div style="padding:24px 0;">
+        <h1 style="font-family:var(--fd);font-size:26px;font-weight:700;margin-bottom:6px;">${c.nome}</h1>
+        <div style="font-size:12px;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;">${c.marca} · ${c.ano}</div>
+        <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Descrição</h3>
+        <p class="d-desc">${c.descricao||'Veículo em ótimas condições. Entre em contato para mais informações.'}</p>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="d-card">
+        ${bd}
+        <div class="d-name">${c.nome}</div>
+        <div class="d-price">${R(c.preco)}</div>
+        <div class="specs-grid" style="margin-top:20px;">
+          <div class="spec-box"><div class="sb-lbl">Ano</div><div class="sb-val">${c.ano}</div></div>
+          <div class="spec-box"><div class="sb-lbl">Quilometragem</div><div class="sb-val">${KM(c.quilometragem)}</div></div>
+          <div class="spec-box"><div class="sb-lbl">Combustível</div><div class="sb-val">${c.combustivel}</div></div>
+          <div class="spec-box"><div class="sb-lbl">Câmbio</div><div class="sb-val">${c.cambio}</div></div>
+          ${c.potencia?`<div class="spec-box"><div class="sb-lbl">Potência</div><div class="sb-val">${c.potencia}</div></div>`:''}
+        </div>
+        <button class="wpp-btn" onclick="window.open('https://wa.me/${WPP}?text=${msg}','_blank')">
+          <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Tenho interesse via WhatsApp
+        </button>
+        <button class="call-btn" onclick="window.location='tel:+${WPP}'">📞 Ligar agora</button>
+      </div>
+      <div class="d-card" style="background:rgba(232,200,64,.06);border-color:rgba(232,200,64,.25);">
+        <div style="font-size:12px;font-weight:700;color:var(--accent-dark);margin-bottom:5px;">🏆 Garantia Av1Automóveis</div>
+        <div style="font-size:13px;color:var(--gray);">Procedência verificada, documentação em ordem e suporte após a compra.</div>
+      </div>
+    </div>
+  </div>`;
+
+  // Funções de navegação da galeria (escopo global temporário)
+  window.changeImg = function(dir){
+    curImg = (curImg + dir + imgs.length) % imgs.length;
+    document.getElementById('galleryMain').src = imgs[curImg];
+    document.getElementById('imgCounter').textContent = `${curImg+1} / ${imgs.length}`;
+    document.querySelectorAll('#thumbsRow img').forEach((t,i)=>{
+      t.style.border = i===curImg ? '2px solid var(--accent2)' : '2px solid transparent';
+      t.style.opacity = i===curImg ? '1' : '.65';
+    });
+  };
+  window.jumpImg = function(i){
+    curImg = i;
+    window.changeImg(0);
+  };
+
+  nav('detail');
+  document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));
+}
+
+function goBack(){ nav(prevPage||'cars'); }
+
+function sendForm(){
+  const n = document.getElementById('cNome').value.trim();
+  const t = document.getElementById('cTel').value.trim();
+  if(!n||!t){ toast('Preencha nome e telefone.'); return; }
+  const msg = encodeURIComponent(`Olá! Me chamo *${n}*.\nTelefone: ${t}\nAssunto: ${document.getElementById('cAssunto').value}\nMensagem: ${document.getElementById('cMsg').value||'—'}`);
+  window.open(`https://wa.me/${WPP}?text=${msg}`, '_blank');
+}
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3000);
+}
+
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// init
+renderHome();
+</script>
+</body>
+</html>

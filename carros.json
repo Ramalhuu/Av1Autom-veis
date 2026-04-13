@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "nome": "Corolla XEi 2.0",
+    "marca": "Toyota",
+    "ano": 2022,
+    "preco": 95000.0,
+    "quilometragem": 32000.0,
+    "potencia": "177cv",
+    "combustivel": "Flex",
+    "cambio": "Automático",
+    "descricao": "Toyota Corolla XEi 2.0 em excelente estado. Único dono, revisões em dia, IPVA pago.",
+    "imagens": [
+      "images/carro_1.jpg"
+    ],
+    "imagem_path": "images/carro_1.jpg",
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
+  },
+  {
+    "id": 2,
+    "nome": "Civic EXL 1.5 Turbo",
+    "marca": "Honda",
+    "ano": 2023,
+    "preco": 142000.0,
+    "quilometragem": 18000.0,
+    "potencia": "173cv",
+    "combustivel": "Flex",
+    "cambio": "CVT",
+    "descricao": "Honda Civic EXL totalmente equipado. Teto solar, bancos em couro, CarPlay.",
+    "imagens": [
+      "images/carro_2.jpg"
+    ],
+    "imagem_path": "images/carro_2.jpg",
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
+  },
+  {
+    "id": 3,
+    "nome": "HB20 Comfort 1.0",
+    "marca": "Hyundai",
+    "ano": 2021,
+    "preco": 62000.0,
+    "quilometragem": 45000.0,
+    "potencia": "80cv",
+    "combustivel": "Flex",
+    "cambio": "Manual",
+    "descricao": "HB20 econômico e conservado. Ideal para uso urbano.",
+    "imagens": [
+      "images/carro_3.jpg"
+    ],
+    "imagem_path": "images/carro_3.jpg",
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
+  },
+  {
+    "id": 4,
+    "nome": "C4",
+    "marca": "Citroen",
+    "ano": 2012,
+    "preco": 59999.0,
+    "quilometragem": 140000.0,
+    "potencia": "180",
+    "combustivel": "Gasolina",
+    "cambio": "Automático",
+    "descricao": "Muito bom",
+    "imagens": [
+      "images/carro_4_1.jpeg",
+      "images/carro_4_2.jpeg",
+      "images/carro_4_3.jpeg",
+      "images/carro_4_4.jpeg",
+      "images/carro_4_5.jpeg",
+      "images/carro_4_6.jpeg",
+      "images/carro_4_7.jpeg",
+      "images/carro_4_8.jpeg",
+      "images/carro_4_9.jpeg",
+      "images/carro_4_10.jpeg"
+    ],
+    "imagem_path": "images/carro_4_1.jpeg",
+    "status": "disponivel",
+    "destaque": true,
+    "preco_original": 64999.0
+  }
+]
