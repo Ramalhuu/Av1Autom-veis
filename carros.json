@@ -14,7 +14,9 @@
       "images/carro_1.jpg"
     ],
     "imagem_path": "images/carro_1.jpg",
-    "status": "reservado"
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
   },
   {
     "id": 2,
@@ -31,7 +33,9 @@
       "images/carro_2.jpg"
     ],
     "imagem_path": "images/carro_2.jpg",
-    "status": "disponivel"
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
   },
   {
     "id": 3,
@@ -48,53 +52,36 @@
       "images/carro_3.jpg"
     ],
     "imagem_path": "images/carro_3.jpg",
-    "status": "disponivel"
+    "status": "disponivel",
+    "destaque": false,
+    "preco_original": null
   },
   {
     "id": 4,
-    "nome": "Onix",
-    "marca": "Chevrolet",
-    "ano": 2023,
-    "preco": 59999.0,
-    "quilometragem": 80000.0,
-    "potencia": "115",
-    "combustivel": "Flex",
-    "cambio": "Automático",
-    "descricao": "Em ótimo estado.",
-    "imagens": [
-      "images/carro_4_1.jpg",
-      "images/carro_4_2.jpg",
-      "images/carro_4_3.jpg",
-      "images/carro_4_4.jpg",
-      "images/carro_4_5.jpg"
-    ],
-    "imagem_path": "images/carro_4_1.jpg",
-    "status": "disponivel"
-  },
-  {
-    "id": 5,
-    "nome": "Citroen C4",
+    "nome": "C4",
     "marca": "Citroen",
-    "ano": 2019,
+    "ano": 2012,
     "preco": 59999.0,
     "quilometragem": 120000.0,
     "potencia": "180",
-    "combustivel": "Flex",
+    "combustivel": "Gasolina",
     "cambio": "Automático",
     "descricao": "Muito bom",
     "imagens": [
-      "images/carro_5_1.jpeg",
-      "images/carro_5_2.jpeg",
-      "images/carro_5_3.jpeg",
-      "images/carro_5_4.jpeg",
-      "images/carro_5_5.jpeg",
-      "images/carro_5_6.jpeg",
-      "images/carro_5_7.jpeg",
-      "images/carro_5_8.jpeg",
-      "images/carro_5_9.jpeg",
-      "images/carro_5_10.jpeg"
+      "images/carro_4_1.jpeg",
+      "images/carro_4_2.jpeg",
+      "images/carro_4_3.jpeg",
+      "images/carro_4_4.jpeg",
+      "images/carro_4_5.jpeg",
+      "images/carro_4_6.jpeg",
+      "images/carro_4_7.jpeg",
+      "images/carro_4_8.jpeg",
+      "images/carro_4_9.jpeg",
+      "images/carro_4_10.jpeg"
     ],
-    "imagem_path": "images/carro_5_1.jpeg",
-    "status": "reservado"
+    "imagem_path": "images/carro_4_1.jpeg",
+    "status": "disponivel",
+    "destaque": true,
+    "preco_original": 64999.0
   }
 ]
