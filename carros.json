@@ -8,12 +8,13 @@
     "quilometragem": 32000.0,
     "potencia": "177cv",
     "combustivel": "Flex",
-    "cambio": "Automático",
+    "cambio": "CVT",
     "descricao": "Toyota Corolla XEi 2.0 em excelente estado. Único dono, revisões em dia, IPVA pago.",
     "imagens": [
-      "images/carro_1.jpg"
+      "images/carro_1_1.jpg",
+      "images/carro_1_2.jpg"
     ],
-    "imagem_path": "images/carro_1.jpg",
+    "imagem_path": "images/carro_1_1.jpg",
     "status": "disponivel",
     "destaque": false,
     "preco_original": null
@@ -33,7 +34,7 @@
       "images/carro_2.jpg"
     ],
     "imagem_path": "images/carro_2.jpg",
-    "status": "disponivel",
+    "status": "vendido",
     "destaque": false,
     "preco_original": null
   },
@@ -52,7 +53,7 @@
       "images/carro_3.jpg"
     ],
     "imagem_path": "images/carro_3.jpg",
-    "status": "disponivel",
+    "status": "vendido",
     "destaque": false,
     "preco_original": null
   },

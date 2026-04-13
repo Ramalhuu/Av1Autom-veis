@@ -1,0 +1,11 @@
+# Gerenciador local — não vai para o GitHub
+gerenciador/
+data/
+
+# Arquivos de sistema
+*.bat
+LEIAME.txt
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
